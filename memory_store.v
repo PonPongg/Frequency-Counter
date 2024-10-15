@@ -1,6 +1,6 @@
 module memory_store
 (
- input  clock,rst_n,         //clk=theta clk =10kHz,
+ input  clock,rst_n,        
  input [15:0] signal_in
 );
 
@@ -9,7 +9,7 @@ wire [15:0]  q,q1,q2;
 reg [15:0] count_address;
 reg [5:0]  memory_number;
 
-//main codw
+//main code
 always @(posedge clock or negedge rst_n)begin
  if(!rst_n)
   count_address<=0;
